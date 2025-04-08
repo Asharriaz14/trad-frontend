@@ -26,7 +26,7 @@ export default function ResponsiveLayout() {
         loop
         playsInline
       >
-        <source src="public/Aonetrade.webm" type="video/mp4" />
+        <source src="/Aonetrade.webm" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
 
@@ -40,7 +40,7 @@ export default function ResponsiveLayout() {
           <div className="lg:w-[60%] w-full flex flex-col items-center md:items-start gap-4 mb-8 lg:mb-0 text-white">
             <div className="h-32">
               <img
-                src="public/A-One - Logo-02.svg"
+                src="/A-One - Logo-02.svg"
                 alt="Left"
                 className="w-full h-full object-cover mb-4"
               />
