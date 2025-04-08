@@ -8,14 +8,14 @@ const Footer = () => {
       <div className="container mx-auto px-4 py-6 flex flex-col md:flex-row justify-between items-center">
         <div className="flex items-center mb-4 md:mb-0">
           <img 
-            src="public/A-One - Logo-02.svg" 
+            src="/A-One - Logo-02.svg" 
             alt="Munafa Capital Logo" 
             className="h-10"
           />
 
           <div className="ml-2">
             <p className="font-bold text-lg">MUNAFA CAPITAL</p>
-            <p className="text-xs">Official Partner of <img src="public/A-One - Logo-02.svg" alt="Partner Logo" className="inline h-4 ml-1" /></p>
+            <p className="text-xs">Official Partner of <img src="/A-One - Logo-02.svg" alt="Partner Logo" className="inline h-4 ml-1" /></p>
           </div>
 
         </div>
