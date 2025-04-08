@@ -46,7 +46,7 @@ const Navbar = () => {
       className={
         token
           ? "hidden"
-          : `fixed top-0 w-full bg-white px-4 lg:px-8 xl:px-16 py-3 z-50 transition duration-300 ${
+          : `fixed top-0 w-full bg-white px-4 lg:px-8 xl:px-16 py-2 z-50 transition duration-300 ${
               isScrolled ? "shadow-md" : ""
             }`
       }
@@ -98,7 +98,7 @@ const Navbar = () => {
       </div>
 
       {isMenuOpen && (
-        <div className="md:hidden mt-4 bg-white shadow-md p-4 rounded">
+        <div className="md:hidden mt-4  shadow-md p-4 rounded">
           <div className="flex flex-col space-y-2">
             {navbarLinks.map((item, index) => (
               <Link

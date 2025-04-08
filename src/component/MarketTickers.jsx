@@ -1,32 +1,83 @@
-import Slider from "./Slider"
+import { ArrowBigDown, ArrowBigUp } from "lucide-react";
+import "../index.css";
 
 const MarketTickers = () => {
+  const categories = [
+    { label: "Popular" },
+    { label: "Forex" },
+    { label: "Crypto CFDs" },
+    { label: "Metals" },
+    { label: "Futures" },
+    { label: "Energy" },
+    { label: "Shares" },
+    { label: "Energy" },
+    { label: "ETFs", highlight: true },
+  ];
 
+  const sliderData = [
+    { name: "Gold", price: "1.268758/1.268858", up: false },
+    { name: "Oil", price: "71.54/71.68", up: true },
+    { name: "BTC/USD", price: "42,587.00/42,650.00", up: false },
+    { name: "ETH/USD", price: "3,258.75/3,260.00", up: true },
+    { name: "Silver", price: "25.60/25.65", up: false },
+    { name: "Apple", price: "192.33/192.50", up: true },
+  ];
 
   return (
-    <div className="bottom-0 left-0 w-full bg-black items-center px-4 py-2 z-10  ">
-      {/* Navigation Buttons */}
-      <div className='flex justify-center h-16 '>
+    <div className="bottom-0 left-0 w-full bg-black px-4 py-4 z-10">
+      <div className="max-w-7xl mx-auto">
+        {/* Category Buttons with Horizontal Scrolling on Small Screens */}
+        <div className="w-full overflow-x-auto mb-8 pb-2">
+          <div className="flex gap-2 min-w-max lg:justify-center">
+            {categories.map((category, idx) => (
+              <button
+                key={idx}
+                className={`rounded-xl px-4 h-8 whitespace-nowrap transition-colors duration-300
+                ${
+                  idx === 0
+                    ? "border border-blue-500 text-white hover:bg-blue-600 hover:border-blue-700"
+                    : category.highlight
+                    ? "text-green-500 hover:text-white hover:bg-blue-600 hover:border-blue-700"
+                    : "text-white hover:bg-blue-600 hover:border-blue-700"
+                }`}
+              >
+                {category.label}
+              </button>
+            ))}
+          </div>
+        </div>
 
-      
-      <div className="flex justify-center space-x-1 text-white text-sm ">
-        <button className="border-1 hover:bg-blue-600 border-blue-500  rounded-xl w-20 h-8 mx-2 m-5">Popular</button>
-        <button className= "hover:bg-blue-600 hover:border-1 hover:border-blue-700 w-16 h-8 rounded-xl mx-2 m-5">Forex</button>
-        <button className= "hover:bg-blue-600 hover:border-1 hover:border-blue-700 w-24 h-8 rounded-xl mx-2 m-5">Crypto CFDs</button>
-        <button className= "hover:bg-blue-600 hover:border-1 hover:border-blue-700 w-16 h-8 rounded-xl mx-2 m-5">Metals</button>
-        <button className= "hover:bg-blue-600 hover:border-1 hover:border-blue-700 w-16 h-8 rounded-xl mx-2 m-5">Futures</button>
-        <button className= "hover:bg-blue-600 hover:border-1 hover:border-blue-700 w-16 h-8 rounded-xl mx-2 m-5">Energy</button>
-        <button className= "hover:bg-blue-600 hover:border-1 hover:border-blue-700 w-16 h-8 rounded-xl mx-2 m-5">Shares</button>
-        <button className= "hover:bg-blue-600 hover:border-1 hover:border-blue-700 w-16 h-8 rounded-xl mx-2 m-5">Energy</button>
-        <button className= "text-green-500 hover:bg-blue-600 hover:text-white hover:border-1 hover:border-blue-700 w-16 mx-2 h-8 rounded-xl m-5">ETFs</button>
-        {/* <button className="hover:text-blue-500 text-green-500">ETFs</button> */}
+        {/* Marquee Container */}
+        <div className="overflow-hidden w-full relative">
+          <div className="animate-marquee whitespace-nowrap flex gap-16">
+            {[...sliderData, ...sliderData].map((item, index) => (
+              <div
+                key={index}
+                className="flex items-center justify-center space-x-2 gap-2 rounded-3xl bg-[#1a1a1a] h-16 p-2"
+              >
+                <div
+                  className={`w-10 h-10 rounded-full flex items-center justify-center ${
+                    item.up ? "bg-green-500" : "bg-red-700"
+                  }`}
+                >
+                  {item.up ? <ArrowBigUp /> : <ArrowBigDown />}
+                </div>
+                <div className="flex flex-col">
+                  <span className="text-white font-bold text-sm text-left">
+                    {item.name}
+                  </span>
+                  <span className="text-white text-xs">{item.price}</span>
+                </div>
+                <button className="custom-blue text-white px-3 py-1 h-10 rounded-full text-xs font-semibold hover:bg-blue-500 transition-colors duration-300">
+                  Trade
+                </button>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
-
-
     </div>
-<Slider/>
-    </div>
-  )
-}
+  );
+};
 
-export default MarketTickers
+export default MarketTickers;
