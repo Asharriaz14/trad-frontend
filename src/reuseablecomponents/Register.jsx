@@ -68,7 +68,7 @@ const navigate=useNavigate()
   
 
       {/* Responsive Right Section */}
-      <div className="my-15 w-full  lg:w-max-w-7xl flex items-center justify-center relative p-4 md:p-0">
+      <div className="my-16 w-full  lg:w-max-w-7xl flex items-center justify-center relative p-4 md:p-0">
 
         <div className="border-2 border-black p-3 w-full max-w-md px-4 md:px-8">
           <div className="mb-8 text-center md:text-left">
