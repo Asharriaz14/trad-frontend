@@ -11,7 +11,7 @@ import DepositPaymentmethod from "./component/Component(Admin)/DepositPaymentmet
 // import TransactionConfirmationForm from './component/Component(Admin)/TransactionConfirmationForm '
 import Support from "./component/Component(Admin)/Support";
 import Passwordsetting from "./component/Component(Admin)/Passwordsetting";
-import OpenNewAccounttype from "./component/Component(Admin)/opennewAccounttype";
+import OpenNewAccounttype from "./component/Component(Admin)/openNewAccounttype";
 // import TradingAccountsTable from './component/Component(Admin)/TradingAccountTable'
 import Emailverification from "./component/Component(Admin)/Emailverification";
 import NumberVerification from "./component/Component(Admin)/NumberVerification";
