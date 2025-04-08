@@ -55,7 +55,7 @@ const Navbar = () => {
         <div className="flex items-center space-x-8">
           <Link to="/" className="flex items-center">
             <img
-              src="/public/logo-bg-removed.png"
+              src="/logo-bg-removed.png"
               height="50"
               width="50"
               alt="Website Logo"
