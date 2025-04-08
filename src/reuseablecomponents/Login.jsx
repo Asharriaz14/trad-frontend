@@ -63,7 +63,7 @@ const Login = () => {
   };
 
   return (
-      <div className="m-3  flex container max-w-4xl mx-auto  md:flex-row w-full bg-gray-100 h-auto">
+      <div className="my-20 m-3  flex container max-w-4xl mx-auto  md:flex-row w-full bg-gray-100 h-auto">
       
     
           {/* Responsive Right Section */}
