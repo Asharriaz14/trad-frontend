@@ -63,16 +63,11 @@ const Login = () => {
   };
 
   return (
-      <div className="my-20 m-3  flex container max-w-4xl mx-auto  md:flex-row w-full bg-gray-100 h-auto">
+      <div className=" m-3  flex container max-w-4xl mx-auto  md:flex-row w-full h-auto">
       
     
           {/* Responsive Right Section */}
-          <div className=" w-full  lg:w-max-w-7xl flex items-center justify-center relative p-4 md:p-0">
-            {/* Close Button */}
-            <button className="absolute top-4 right-4 text-2xl font-bold text-gray-600">
-              <X size={24} />
-            </button>
-    
+          <div className="my-15 w-full  lg:w-max-w-7xl flex items-center justify-center relative p-4 md:p-0">
             <div className="border-2 border-black p-3 w-full max-w-md px-4 md:px-8">
               <div className="mb-8 text-center md:text-left">
                 <h1 className="text-2xl md:text-3xl font-bold text-red-500 mb-2">Aone</h1>
