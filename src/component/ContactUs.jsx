@@ -40,7 +40,7 @@ const ContactUs = () => {
   };
 
   return (
-    <div className="w-full bg-black text-white py-10 px-4 md:px-8 relative overflow-hidden">
+    <div className="mt-16 w-full bg-black text-white py-10 px-4 md:px-8 relative overflow-hidden">
       {/* Decorative Dots */}
       <div className="absolute right-0 top-1/2 transform -translate-y-1/2">
         <div className="grid grid-cols-3 gap-2">
